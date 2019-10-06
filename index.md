@@ -1,1 +1,2 @@
 ##yaski
+Ini yaski
