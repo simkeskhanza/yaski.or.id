@@ -818,3 +818,7 @@ li.nav-item .btn-white {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+.page-section {
+  padding: 8rem 0;
+}
