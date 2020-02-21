@@ -5,11 +5,71 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YASKI &#8211; Yayasan SIMRS Khanza Indonesia</title>
+  <title>YASKI &#8211; Yayasan Administrator SIMRS Khanza Indonesia</title>
 <meta name='robots' content='noindex,follow' />
 <link rel='stylesheet' id='bootstrap-css'  href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='fontawesome5-css'  href='https://use.fontawesome.com/releases/v5.6.1/css/all.css' type='text/css' media='all' />
 <link rel='stylesheet' id='yaski-css'  href='./css/styles.css' type='text/css' media='all' />
+<style>
+@media (max-width: 300px) {
+  .carosel-item {
+    width: 100%;
+  }
+}
+@media (min-width: 300px) {
+  .carosel-item {
+    width: 100%;
+  }
+}
+@media (min-width: 500px) {
+  .carosel-item {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .carosel-item {
+    width: 25%;
+  }
+}
+.carosel {
+  position: relative;
+  background-color: #000;
+}
+.carosel-inner {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0;
+}
+.carosel-item {
+  display: inline-block;
+}
+.carosel-control {
+  position: absolute;
+  top: 50%;
+  padding: 15px;
+  /*box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+  border-radius: 50%;*/
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  display: inline-block;
+}
+.carosel-control-left {
+  left: 15px;
+}
+.carosel-control-right {
+  right: 15px;
+}
+.carosel-control:active,
+.carosel-control:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+.bottom-caption {
+  position: absolute;
+  bottom: 8px;
+}
+</style>
 </head>
 
 <body class="home page-template page-template-homepage page-template-homepage-php page page-id-11">
@@ -18,7 +78,7 @@
 <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light navbar-custom text-center">
   <div class="container">
 
-        <a class="navbar-brand" href="https://www.yaski.or.id/">YASKI</a>
+        <a class="navbar-brand" href="https://yaski.or.id/">YASKI</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +91,7 @@
 <li  id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-45"><a href="./#tim" class="nav-link">Tim</a></li>
 <li  id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-45"><a href="./#event" class="nav-link">Event</a></li>
 <li  id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-45"><a href="./#kontak" class="nav-link">Kontak</a></li>
-<li  id="menu-item-27" class="btn btn-outline-success btn-outline p-0 pr-2 pl-2 ml-2 menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-27"><a href="https://simkes.basoro.id" class="nav-link">Dokumentasi</a></li>
+<li  id="menu-item-27" class="btn btn-outline-success btn-outline p-0 pr-2 pl-2 ml-2 menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-27"><a href="https://simkeskhanza.com" class="nav-link">Dokumentasi</a></li>
 </ul>
           </div>
 
@@ -42,18 +102,18 @@
     <section class="cover-5 text-center" id="about">
       <div class="cover-container pb-5 ">
         <div class="cover-inner container">
-          <p class="lead ">Yayasan SIMRS Khanza Indonesia</p>
+          <p class="lead ">Yayasan Administrator SIMRS Khanza Indonesia</p>
           <div class="divider"></div>
-          <h1 class="jumbotron-heading">SIMKES Indonesia <strong>100% Gratis</strong></h1>
+          <h1 class="jumbotron-heading">SIMRS Indonesia <strong>100% Gratis</strong></h1>
           <img class="img-fluid p-5 alignnone" src="./images/placeholder-macbook.png" alt="" />
         </div>
       </div>
       <div class="container text-center">
-          <figure>
-            <img class="img-fluid col-md-4" src="./images/gambar.png">
-          </figure>
-        <a href="./download/PELATIHAN_SIMKES_KHANZA_2020.pdf" target="_blank">Download TOR & Rundown</a><br>
-        <a class="btn btn-lg btn-success pill-btn mt-3" href="https://forms.gle/uoKvuZXziwn8wa5Y7" target="_blank">DAFTAR PELATIHAN</a>
+        <figure>
+          <img class="img-fluid col-md-4" src="./images/gambar.png">
+        </figure>
+      <a href="./download/PELATIHAN_SIMKES_KHANZA_2020.pdf" target="_blank">Download TOR & Rundown</a><br>
+      <a class="btn btn-lg btn-success pill-btn mt-3" href="https://forms.gle/uoKvuZXziwn8wa5Y7" target="_blank">DAFTAR PELATIHAN</a>
       </div>
       <br></br>
       <div class="container pb-5">
@@ -77,6 +137,7 @@
         </div>
       </div>
     </section>
+
     <section class="content-1" id="fitur">
       <div class="container">
         <div class="row justify-center">
@@ -85,7 +146,7 @@
           </div>
           <div class="col-md-6 text-center text-md-left" >
             <h2 class="mb-4 mt-4">Fitur-Fitur Unggulan Aplikasi Mobile</h2>
-            <p class="mb-4">SIMKES Khanza data digunakan dimana saja dan kapan saja karena ada fitur Mobile untuk Pasien, Dokter, Karwayan dan Manajemen.</p>
+            <p class="mb-4">SIMRS Khanza data digunakan dimana saja dan kapan saja karena ada fitur Mobile untuk Pasien, Dokter, Karwayan dan Manajemen.</p>
             <p><a class="btn btn-outline-secondary" href="#" role="button">Selengkapnya</a></p>
           </div>
         </div>
@@ -96,7 +157,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-8 text-center text-lg-left">
-            <h2 class="mt-4 mb-1 ml-2 mr-0">Tertarik dengan SIMKES Khanza?</h2>
+            <h2 class="mt-4 mb-1 ml-2 mr-0">Tertarik dengan SIMRS Khanza?</h2>
             <p class="lead mb-3">Silahkan unduh dan pasang di RS/Klinik/Puskesmas anda.</p>
           </div>
           <div class="col-lg-4">
@@ -105,150 +166,55 @@
         </div>
       </div>
     </section>
-
+    
     <section class="team-4 text-center" id="tim">
       <div class="container">
-        <h3 class="mb-3">TIM YASKI</h3>
+        <h3 class="mb-3">PENGURUS YASKI</h3>
         <div class="divider"></div>
         <div class="row">
-          <div id="timYaski" class="carousel slide" data-ride="carousel" data-interval="9000">
-            <div class="carousel-inner row w-100 mx-auto" role="listbox">
 
-          <div class="carousel-item col-md-3 col-team active">
-            <figure>
-              <img class="rounded-corners img-fluid" src="./images/windi.jpeg">
-              <figcaption>
-                <ul class="social">
-                  <li><a href="http://twitter.com" title="Facebook" class="fab fa-facebook"></a></li>
-                  <li><a href="#" title="Twitter" class="fab fa-twitter"></a></li>
-                  <li><a href="#" title="Google+" class="fas fa-globe"></a></li>
-                  <div class="clear"></div>
-                </ul>
-              </figcaption>
-            </figure>
-            <h4>Windiarto S. Kom</h4>
-            <p><span class="emphasis">Owner dan Founder</span></p>
-            <p><p>Owner dan Founder SIMKES Khanza. Main Developer seluruh Modul SIMKES Khanza.</p>
-          </div>
-
-        	<div class="carousel-item col-md-3 col-team">
-            <figure>
-              <img class="rounded-corners img-fluid" src="./images/kusmanto.jpeg">
-              <figcaption>
-                <ul class="social">
-                  <li><a href="http://twitter.com" title="Facebook" class="fab fa-facebook"></a></li>
-                  <li><a href="#" title="Twitter" class="fab fa-twitter"></a></li>
-                  <li><a href="#" title="Google+" class="fas fa-globe"></a></li>
-                  <div class="clear"></div>
-                </ul>
-              </figcaption>
-            </figure>
-            <h4>Kusmanto Lesmana, SE</h4>
-            <p><span class="emphasis">CEO</span></p>
-            <p><p>Wakil Direktur di Rumah Sakit Juanda. Ketua Yayasan SIMRS Khanza Indonesia (CEO).</p>
-          </div>
-
-        	<div class="carousel-item col-md-3 col-team">
-            <figure>
-              <img class="rounded-corners img-fluid" src="./images/haries.jpeg">
-              <figcaption>
-                <ul class="social">
-                  <li><a href="http://twitter.com" title="Facebook" class="fab fa-facebook"></a></li>
-                  <li><a href="#" title="Twitter" class="fab fa-twitter"></a></li>
-                  <li><a href="#" title="Google+" class="fas fa-globe"></a></li>
-                  <div class="clear"></div>
-                </ul>
-              </figcaption>
-            </figure>
-            <h4>Haries Rochmat</h4>
-            <p><span class="emphasis">Chief Officer</span></p>
-            <p><p>Kepala Instalasi SIMRS RS Bhayangkara Nganjuk. Ketua Tim Pelatihan dan Seminar SIMRS Khanza.</p>
-          </div>
-
-        	<div class="carousel-item col-md-3 col-team">
-            <figure>
-              <img class="rounded-corners img-fluid" src="./images/basoro.jpeg">
-              <figcaption>
-                <ul class="social">
-                  <li><a href="http://twitter.com" title="Facebook" class="fab fa-facebook"></a></li>
-                  <li><a href="#" title="Twitter" class="fab fa-twitter"></a></li>
-                  <li><a href="#" title="Google+" class="fas fa-globe"></a></li>
-                  <div class="clear"></div>
-                </ul>
-              </figcaption>
-            </figure>
-            <h4>drg. F. Basoro</h4>
-            <p><span class="emphasis">Mobile Developer</span></p>
-            <p><p>Dokter Gigi di RSUD H. Damanhuri Barabai. Ketua Tim pengembangan Aplikas Mobile SIMRS Khans. </p>
-          </div>
-
-        	<div class="carousel-item col-md-3 col-team">
-            <figure>
-              <img class="rounded-corners img-fluid" src="./images/salim.jpeg">
-              <figcaption>
-                <ul class="social">
-                  <li><a href="http://twitter.com" title="Facebook" class="fab fa-facebook"></a></li>
-                  <li><a href="#" title="Twitter" class="fab fa-twitter"></a></li>
-                  <li><a href="#" title="Google+" class="fas fa-globe"></a></li>
-                  <div class="clear"></div>
-                </ul>
-              </figcaption>
-            </figure>
-            <h4>dr. Salim Mulyana</h4>
-            <p><span class="emphasis">Documentation</span></p>
-            <p><p>Dokter Umum di Puskesmas Tunggakjati Karawang Propinsi Banten. Ketua Tim dokumentasi SIMRS Khanza. </p>
-          </div>
-
-          <div class="carousel-item col-md-3 col-team">
-            <figure>
-              <img class="rounded-corners img-fluid" src="./images/dr.iful.jpg">
-              <figcaption>
-                <ul class="social">
-                  <li><a href="http://twitter.com" title="Facebook" class="fab fa-facebook"></a></li>
-                  <li><a href="#" title="Twitter" class="fab fa-twitter"></a></li>
-                  <li><a href="#" title="Google+" class="fas fa-globe"></a></li>
-                  <div class="clear"></div>
-                </ul>
-              </figcaption>
-            </figure>
-            <h4>dr. Saiful Umam, MH. Kes</h4>
-            <p><span class="emphasis">Secretary</span></p>
-            <p><p>Konsultan Hukum Kesehatan dan Sekretaris Yayasan SIMRS Khanza. </p>
-          </div>
-
-          <div class="carousel-item col-md-3 col-team">
-            <figure>
-              <img class="rounded-corners img-fluid" src="./images/edy.jpeg">
-              <figcaption>
-                <ul class="social">
-                  <li><a href="http://twitter.com" title="Facebook" class="fab fa-facebook"></a></li>
-                  <li><a href="#" title="Twitter" class="fab fa-twitter"></a></li>
-                  <li><a href="#" title="Google+" class="fas fa-globe"></a></li>
-                  <div class="clear"></div>
-                </ul>
-              </figcaption>
-            </figure>
-            <h4>Edy Suprayitno, SE</h4>
-            <p><span class="emphasis">Agent</span></p>
-            <p><p>Implementor dan Bendahara Yayasan SIMRS Khanza. </p>
-          </div>
-
-
+          <div class="carosel" id="carosel1">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" href="#tim"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="./images/windi.jpeg" />
+              <img class="carosel-item" src="./images/kusmanto.jpeg" />
+              <img class="carosel-item" src="./images/haries.jpeg" />
+              <img class="carosel-item" src="./images/salim.jpeg" />
+              <img class="carosel-item" src="./images/driful.jpeg" />
+              <img class="carosel-item" src="./images/pakedy.jpeg" />
+              <img class="carosel-item" src="./images/agus.jpeg" />
+              <img class="carosel-item" src="./images/adri.jpeg" />
             </div>
-            <a class="carousel-control-prev" href="#timYaski" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next text-faded" href="#timYaski" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" href="#tim"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
           </div>
+
         </div>
       </div>
-    </section>
+    </section>    
+    
+    <section class="team-4 text-center" id="dev">
+      <div class="container">  
+        <h3 class="mb-3">KONTRIBUTOR SIMKES KHANZA</h3>
+        <div class="divider"></div>
+        <div class="row">
+    
+          <div class="carosel" id="carosel2">
+            <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" href="#dev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+            <div class="carosel-inner">
+              <img class="carosel-item" src="./images/basoro.jpeg" />
+              <img class="carosel-item" src="./images/wahid.jpeg" />
+              <img class="carosel-item" src="http://placehold.it/500/eeeeee&amp;text=3" />
+              <img class="carosel-item" src="http://placehold.it/500/f4f4f4&amp;text=4" />
+              <img class="carosel-item" src="http://placehold.it/500/fcfcfc/333&amp;text=5" />
+              <img class="carosel-item" src="http://placehold.it/500/f477f4/fff&amp;text=6" />
+            </div>
+            <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" href="#dev"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+          </div>
 
-
+        </div>
+      </div>
+    </section>    
+    
   <!-- Call to Action Section -->
   <section class="page-section" id="event">
     <div class="container text-center">
@@ -301,8 +267,8 @@
           </a>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="./images/cc-1-1.jpg">
-            <img class="img-fluid" src="./images/cc-1-1.jpg" alt="">
+          <a class="portfolio-box" href="./images/cc-1-1.jpeg">
+            <img class="img-fluid" src="./images/cc-1-1.jpeg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
                 Category
@@ -411,7 +377,7 @@
     <div class="row mb-5 text-center text-md-left">
         <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12" id="footer" role="navigation">
       <div class="row">
-        <div class="widget_text custom_html-5 widget_custom_html col-sm"><h5 class="h5">Yayasan ASKI</h5><div class="textwidget custom-html-widget"><p class="pb-4">Yayasan yang menaungi dan wadah bagi para Pengguna SIMKES Khanza Indonesia. SIMKES Khanza dipakai lebih dari 100 Rumah Sakit / Klinik / Puskesmas. Dengan modul-modul lengkap, sangat cocok digunakan dalam proses bisnis Rumah Sakit baik Front Office maupun Back Office.</p>
+        <div class="widget_text custom_html-5 widget_custom_html col-sm"><h5 class="h5">Yayasan ASKI</h5><div class="textwidget custom-html-widget"><p class="pb-4">Yayasan yang menaungi dan wadah bagi para Pengguna SIMRS Khanza Indonesia. SIMRS Khanza dipakai lebih dari 100 Rumah Sakit / Klinik / Puskesmas. Dengan modul-modul lengkap, sangat cocok digunakan dalam proses bisnis Rumah Sakit baik Front Office maupun Back Office.</p>
 </div></div>      </div>
     </div>
 
@@ -462,33 +428,21 @@
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js'></script>
 <script>
-$('#timYaski').on('slide.bs.carousel', function (e) {
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 4;
-    var totalItems = $('.carousel-item').length;
 
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
-    }
+$('.carosel-control-right').click(function() {
+  $(this).blur();
+  $(this).parent().find('.carosel-item').first().insertAfter($(this).parent().find('.carosel-item').last());
 });
-
-$('#timYaski').carousel({
-    interval: 2000
-});
+$('.carosel-control-left').click(function() {
+  $(this).blur();
+  $(this).parent().find('.carosel-item').last().insertBefore($(this).parent().find('.carosel-item').first());
+});  
+  
 jQuery( document ).ready(function() {
    jQuery('ul.menu').addClass('nav-footer');
    jQuery('ul > li > a').addClass('nav-link');
 });
+  
 </script>
 </body>
 </html>
