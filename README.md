@@ -1,2 +1,2 @@
 # yaski.or.id
-Yaski Web Site
+Yaski Website Resmi
