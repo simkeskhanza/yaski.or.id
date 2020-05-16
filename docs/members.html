@@ -49,6 +49,7 @@
                   <th>Alamat</th>
                   <th>Provinsi</th>
                   <th>PIC Telegram</th>
+                  <th>Ket</th>
                 </tr>
               </thead>
               <tbody>
@@ -66,295 +67,333 @@
   $(document).ready(function() {
     var jsonData = [
       {
-        "nama": "RSUD H. DAMANHURI","alamat": "Jl. Murakata 04 - Barabai","kode": "6307012","prov": "Kalimantan Selatan","pic": "@basoro"
+        "nama": "RSUD H. Damanhuri","alamat": "Jl. Murakata 04 - Barabai","kode": "6307012","prov": "Kalimantan Selatan",
+        "pic": "@basoro","ket": "<a href=\"https://drive.google.com/file/d/1QPaSTY53Vr9rpi1nRJ4jGDpJ4YQUgvY1/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS SURYA INSANI","alamat": "Jl. Diponegoro Km 4 Pasir Pengaraian","kode": "1407014","prov": "Riau","pic": "@Sukamto24"
+        "nama": "RS Surya Insani","alamat": "Jl. Diponegoro Km 4 Pasir Pengaraian","kode": "1407014","prov": "Riau",
+        "pic": "@Sukamto24","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-S0JKUGJfNGh5UFA0TnFzNDBWTGQwNHZFQWtR/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS THURSINA","alamat": "Jl. Hang Tuah, No. 93, Duri","kode": "0","prov": "Riau","pic": "@"
+        "nama": "RS Thursina","alamat": "Jl. Hang Tuah, No. 93, Duri","kode": "0","prov": "Riau",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-ZWZvRDhWU2dZOWdGWWMzTUtGUDVxMVBIMllF/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS CITRA HUSADA","alamat": "Jl. Dharma Bakti No.45C, Tj. Niaga","kode": "6110013","prov": "Kalimantan Barat","pic": "@"
+        "nama": "RS Citra Husada","alamat": "Jl. Dharma Bakti No.45C, Tj. Niaga","kode": "6110013","prov": "Kalimantan Barat",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-NFh1SjNlUlFucV94dXpMVWZSc2t4Q3pCaDlv/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSUD PURUK CAHU","alamat": "Jl. Ahmad Yani No.497, Beriwit, Murung","kode": "6213022","prov": "Kalimantan Tengah","pic": "@orlandorezki"
+        "nama": "RSUD Puruk Cahu","alamat": "Jl. Ahmad Yani No.497, Beriwit, Murung","kode": "6213022","prov": "Kalimantan Tengah",
+        "pic": "@orlandorezki","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-N3VybDJLVWR0N0tMUUpBTTNqUGswOV9GMUhv/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS INTAN MEDIKA","alamat": "Jl. Deket - Lamongan","kode": "3524046S","prov": "Jawa Timur","pic": "@"
+        "nama": "RS Intan Medika","alamat": "Jl. Deket - Lamongan","kode": "3524046S","prov": "Jawa Timur",
+        "pic": "08563134544","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-bkNIRE9jNmFPTk9FdEtzWVdOQ1ROdE93RW1v/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSUD RATU ZALECHA","alamat": "Jl. Menteri Empat, Martapura","kode": "6303015","prov": "Kalimantan Selatan","pic": "@bibing_oke"
+        "nama": "RSUD Ratu Zalecha","alamat": "Jl. Menteri Empat, Martapura","kode": "6303015","prov": "Kalimantan Selatan",
+        "pic": "@bibing_oke","ket": "<a href=\"https://drive.google.com/file/d/1ufW0euHmUBE5DKpie_akhCh4JP-AXUE1/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSUD dr. H. Soemarno Sosroatmodjo","alamat": "Jl. Tambun Bungai No.16, Selat Tengah","kode": "6203015","prov": "Kalimantan Tengah","pic": "@Adeanggaraputra"
+        "nama": "RSUD dr. H. Soemarno","alamat": "Jl. Tambun Bungai No.16, Selat Tengah","kode": "6203015","prov": "Kalimantan Tengah",
+        "pic": "@Adeanggaraputra","ket": "<a href=\"https://drive.google.com/file/d/13EOO0SeaS_wxHOGqigdUl-ZU6HQXcRPc/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSUD Kabupaten Bekasi","alamat": "Jl. Raya Teuku Umar No.202, Wanasari","kode": "3216252","prov": "Jawa Barat","pic": "@shuggeng"
+        "nama": "RSUD Kabupaten Bekasi","alamat": "Jl. Raya Teuku Umar No.202, Wanasari","kode": "3216252","prov": "Jawa Barat",
+        "pic": "@shuggeng","ket": "<a href=\"https://drive.google.com/file/d/13_8ZUAuluLo60fA9sF0z-kew9GH8fGT-/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSIA Permata Serdang","alamat": "Jl. Raya Waringin Kurung","kode": "3604050","prov": "Banten","pic": "@rendrafm"
+        "nama": "RSIA Permata Serdang","alamat": "Jl. Raya Waringin Kurung","kode": "3604050","prov": "Banten",
+        "pic": "@rendrafm","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-QnZJakJwenpKZkh6TEdkcFZPWlJ2TnFPYng0/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Bhayangkara Nganjuk","alamat": "Jl. Abd Saleh, No. 56, Nganjuk","kode": "3518045","prov": "Jawa Timur","pic": "@hariesrochmat"
+        "nama": "RS Bhayangkara Nganjuk","alamat": "Jl. Abd Saleh, No. 56, Nganjuk","kode": "3518045","prov": "Jawa Timur",
+        "pic": "@hariesrochmat","ket": "<a href=\"https://drive.google.com/file/d/1OvgpvF6klXqpo9eaWnOqb3xWTOj1vhH2/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Tebet ","alamat": "Jl. Letjen M.T. Haryono Kav. 13 No. 8, Tebet","kode": "3171461","prov": "DKI Jakarta","pic": "@"
+        "nama": "RS Tebet ","alamat": "Jl. Letjen M.T. Haryono Kav. 13 No. 8, Tebet","kode": "3171461","prov": "DKI Jakarta",
+        "pic": "081806778555","ket": "<a href=\"https://drive.google.com/file/d/171dqK6-4i46dm0NS03w4nsNRfXkfiNtF/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Simpangan Depok","alamat": "Jl. Raya Jakarta-Bogor No.KM.36","kode": "3276135","prov": "Jawa Barat","pic": "@1"
+        "nama": "RS Simpangan Depok","alamat": "Jl. Raya Jakarta-Bogor No.KM.36","kode": "3276135","prov": "Jawa Barat",
+        "pic": "@acwiwoho","ket": "<a href=\"https://drive.google.com/file/d/1nzs8hU-cZbZF8OED2PEKJWfZ9Awlc-c2/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Satiti Prima Husada","alamat": "Balekambang, Tulungagung","kode": "3504069","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Satiti Prima Husada","alamat": "Balekambang, Tulungagung","kode": "3504069","prov": "Jawa Timur",
+        "pic": "@Edy_suprayitno","ket": "<a href=\"https://drive.google.com/file/d/1iJbcDobbez3wgfyUgGkXp9CKVrSEH2_Y/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Sahabat","alamat": "Jl. Raya Surabaya - Malang","kode": "3514054","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Sahabat","alamat": "Jl. Raya Surabaya - Malang","kode": "3514054","prov": "Jawa Timur",
+        "pic": "@Febri_fazz","ket": "<a href=\"https://drive.google.com/file/d/1tRmUXasxQK_kZOJfnMzxtrwrFBvNoEB4/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Mitra Sehat","alamat": "Jl. Krian-Mojosari, Sidoarjo","kode": "3515143","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Mitra Sehat","alamat": "Jl. Krian-Mojosari, Sidoarjo","kode": "3515143","prov": "Jawa Timur",
+        "pic": "@bsaf07","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-WG1MUENxOHNoaGxvXzd0YUtOcWROZkEzcG9z/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Juanda","alamat": "Jl. Ir. H. Juanda No.207, Kuningan","kode": "3208046","prov": "Jawa Barat","pic": "@1"
+        "nama": "RS Juanda","alamat": "Jl. Ir. H. Juanda No.207, Kuningan","kode": "3208046","prov": "Jawa Barat",
+        "pic": "@Lesmana","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-emZoU0dkM0N1UFlCSEFrRXBkeUNsUy1rd3dv/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Bhayangkara Mamuju","alamat": "Unnamed Road, Simboro, Mamuju","kode": "7604027","prov": "Sulawesi Barat","pic": "@1"
+        "nama": "RS Bhayangkara Mamuju","alamat": "Unnamed Road, Simboro, Mamuju","kode": "7604027","prov": "Sulawesi Barat",
+        "pic": "@Andijoppar","ket": "<a href=\"https://drive.google.com/file/d/1syjzAh1FqNghV_VWpDnjeKZQj_ImtE7t/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Bersalin Jeumpa","alamat": "Jl. Sultan Syarif Abdurrahman No.54, Pontianak","kode": "6171085","prov": "Kalimantan Barat","pic": "@1"
+        "nama": "RS Bersalin Jeumpa","alamat": "Jl. Sultan Syarif Abdurrahman No.54, Pontianak","kode": "6171085","prov": "Kalimantan Barat",
+        "pic": "@Sufri05","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-eVM1WmpGUHJuMjlVMVc4LUFIcFJMRzJNTlZR/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSUD Bayung Lencir","alamat": "Jl. Palembang - Jambi","kode": "1607012","prov": "Sumatera Selatan","pic": "@1"
+        "nama": "RSUD Bayung Lencir","alamat": "Jl. Palembang - Jambi","kode": "1607012","prov": "Sumatera Selatan",
+        "pic": "@Nur_Halim","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-c3BEQnJoanRJcFdVWFFvZHppRFpVdjZEX3dz/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Bethesda","alamat": "Jl. Diponegoro No.375 C, Kota Gn. Sitoli","kode": "1278002","prov": "Sumatera Utara","pic": "@1"
+        "nama": "RS Bethesda","alamat": "Jl. Diponegoro No.375 C, Kota Gn. Sitoli","kode": "1278002","prov": "Sumatera Utara",
+        "pic": "@alfa_62","ket": "<a href=\"https://drive.google.com/file/d/0B8PdKvdxjYv-QVNCRHBNNXh6aVZaNmpYUC13QkJRTXFqLTVv/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "Klinik ASA PPNI Jember","alamat": "Jl. Airlangga No.102, Paseban, Jember","kode": "0000000","prov": "Jawa Timur","pic": "@1"
+        "nama": "Klinik ASA PPNI Jember","alamat": "Jl. Airlangga No.102, Paseban, Jember","kode": "0000000","prov": "Jawa Timur",
+        "pic": "@Bagoes85","ket": "<a href=\"https://drive.google.com/open?id=0B8PdKvdxjYv-dDY1WG5sN3NibzFwV0RVVWwydTVVR2RBVk4w\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSIA Nirmala","alamat": "Jl. Jaksa Agung Suprapto, Kediri","kode": "3571111","prov": "Jawa Timur","pic": "@1"
+        "nama": "RSIA Nirmala","alamat": "Jl. Jaksa Agung Suprapto, Kediri","kode": "3571111","prov": "Jawa Timur",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/1v2K5AyQAeo_RsC8YhHinM-KKmq0vurnr/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Esto Ebhu","alamat": "Jl. DR. Cipto No.38, Gudang, Sumenep","kode": "3529026","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Esto Ebhu","alamat": "Jl. DR. Cipto No.38, Gudang, Sumenep","kode": "3529026","prov": "Jawa Timur",
+        "pic": "@prayogosukses","ket": "<a href=\"https://drive.google.com/file/d/1fIJYbcarOXLy76yIejPZYjO6ie0tlLMb/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Aveciena Medika","alamat": "Jalan A. Yani Km. 38, Martapura","kode": "6303030","prov": "Kalimantan Selatan","pic": "@1"
+        "nama": "RS Aveciena Medika","alamat": "Jalan A. Yani Km. 38, Martapura","kode": "6303030","prov": "Kalimantan Selatan",
+        "pic": "@widiu7omo","ket": "<a href=\"https://drive.google.com/file/d/1O8E-DCug5CJwTb9USHaAuxD10dpIl6_O/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Amanah Umat","alamat": "Jl. Brigjen Katamso No.144-A, Purworejo","kode": "3306111","prov": "Jawa Tengah","pic": "@1"
+        "nama": "RS Amanah Umat","alamat": "Jl. Brigjen Katamso No.144-A, Purworejo","kode": "3306111","prov": "Jawa Tengah",
+        "pic": "@salehfauzan","ket": "<a href=\"https://drive.google.com/file/d/1a9Zx6GYM2vYNSrD56mPsLTOvBaiSz_I7/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Islam Lumajang","alamat": "Jl. Kyai Muksin No.19","kode": "3508056S","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Islam Lumajang","alamat": "Jl. Kyai Muksin No.19","kode": "3508056S","prov": "Jawa Timur",
+        "pic": "@Burhan_RSILumajang","ket": "<a href=\"https://drive.google.com/file/d/1VW6NeMF1oFqFJwzBazumtoQ-b0QCvFDP/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSIA Mawar","alamat": "Jl. Lintas timur, Labuhan Ratu","kode": "1804013","prov": "Lampung","pic": "@1"
+        "nama": "RSIA Mawar","alamat": "Jl. Lintas timur, Labuhan Ratu","kode": "1804013","prov": "Lampung",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/1jxAzLHEYMyOpUT58kHVqYmqqHVXphmkz/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Thalia Irham","alamat": "Jl. Poros Limbung No.Km. 15, Kab. Gowa","kode": "7306057","prov": "Sulawesi Selatan","pic": "@1"
+        "nama": "RS Thalia Irham","alamat": "Jl. Poros Limbung No.Km. 15, Kab. Gowa","kode": "7306057","prov": "Sulawesi Selatan",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/1ilU_zb2qjFj-0GeQ9-qtxm-AoTY1b6Wh/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSUD Kertosono","alamat": "Jl. Panglima Sudirman No.16, Nganjuk","kode": "3518022","prov": "Jawa Timur","pic": "@1"
+        "nama": "RSUD Kertosono","alamat": "Jl. Panglima Sudirman No.16, Nganjuk","kode": "3518022","prov": "Jawa Timur",
+        "pic": "@Yoehanz","ket": "<a href=\"https://drive.google.com/file/d/1rV4s0QHvyqwh84OmpSgJGL-OTwZL_07x/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS PKU Muhammadiyah","alamat": "Jl. KH Mas Mansyur No.180 - 182, Surabaya","kode": "3578783","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS PKU Muhammadiyah","alamat": "Jl. KH Mas Mansyur No.180 - 182, Surabaya","kode": "3578783","prov": "Jawa Timur",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/1Hbh_GUR6gzXRvxCnTLXNkbtMCzLGYyEo/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "Rumah Sakit Umum Dr. R Sudjono","alamat": "Jl. Prof. M Yamin SH No.55, Lombok Timur","kode": "5203012","prov": "Nusa Tenggara Barat","pic": "@1"
+        "nama": "RSUD Dr. R Sudjono","alamat": "Jl. Prof. M Yamin SH No.55, Lombok Timur","kode": "5203012","prov": "Nusa Tenggara Barat",
+        "pic": "@Andi_ardi","ket": "<a href=\"https://drive.google.com/file/d/1DtPGT8bKORr_5EsXqEcNvuUK3sNmBKBH/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSU Wisata UIT","alamat": "Jl. Abd. Kadir No.70, Makassar","kode": "7371412","prov": "Sulawesi Selatan","pic": "@1"
+        "nama": "RSU Wisata UIT","alamat": "Jl. Abd. Kadir No.70, Makassar","kode": "7371412","prov": "Sulawesi Selatan",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/1tOGNAy_L_SDKL4VIjcGbgL6ESqz_ClMH/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSIA Masyita","alamat": "Jl. Cambajawayya No.24, Makassar","kode": "7371107","prov": "Sulawesi Selatan","pic": "@1"
+        "nama": "RSIA Masyita","alamat": "Jl. Cambajawayya No.24, Makassar","kode": "7371107","prov": "Sulawesi Selatan",
+        "pic": "@","ket": "<a href=\"https://drive.google.com/file/d/1SCD3ZvOAKmixvLJRfM-klugTjezI91_5/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSU Kharisma Paramedika","alamat": "Jl. Khudori No.34","kode": "3401048","prov": "Yogyakarta","pic": "@1"
+        "nama": "RSU Kharisma Paramedika","alamat": "Jl. Khudori No.34","kode": "3401048","prov": "Yogyakarta",
+        "pic": "@Ekanur12","ket": "<a href=\"https://drive.google.com/file/d/1XIJQmLncQccc9nnjkMv3apUy2nF55r4j/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Islam Al-Ikhlas","alamat": "Jl. Kolonel Sugiyono No. 13, Pemalang","kode": "3327043","prov": "Jawa Tengah","pic": "@1"
+        "nama": "RS Islam Al-Ikhlas","alamat": "Jl. Kolonel Sugiyono No. 13, Pemalang","kode": "3327043","prov": "Jawa Tengah",
+        "pic": "@Rezhawisnu","ket": "<a href=\"https://drive.google.com/open?id=1oqgmWtZ5WF1a3o5iJtxUrLjx4KY12Jrq\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RSUD Aceh Tamiang","alamat": "Jl. Kesehatan, Tamiang","kode": "1114011","prov": "Aceh","pic": "@1"
+        "nama": "RSUD Aceh Tamiang","alamat": "Jl. Kesehatan, Tamiang","kode": "1114011","prov": "Aceh",
+        "pic": "@tauviec_M1T","ket": "<a href=\"https://drive.google.com/file/d/19_Acn0U0hEsxLSWCA0qgYsjb4E1TPq3H/view?usp=sharing\" target=_blank>Paklaring</a>"
       },
       {
-        "nama": "RS Amal Sehat","alamat": "Jl. Ngerjopuro, Wonogiri","kode": "3312306","prov": "Jawa Tengah","pic": "@1"
+        "nama": "RS Amal Sehat","alamat": "Jl. Ngerjopuro, Wonogiri","kode": "3312306","prov": "Jawa Tengah","pic": "@Eko_Setijono_ST","ket": ""
       },
       {
-        "nama": "RSKIA Sadewa","alamat": "Babarsari Blok TB 16","kode": "3404187","prov": "Yogyakarta","pic": "@1"
+        "nama": "RSKIA Sadewa","alamat": "Babarsari Blok TB 16","kode": "3404187","prov": "Yogyakarta","pic": "@Haris_sadewa","ket": ""
       },
       {
-        "nama": "RS Permata Medika","alamat": "Jl. Indrakila No.17, Kebumen","kode": "3305023","prov": "Jawa Tengah","pic": "@1"
+        "nama": "RS Permata Medika","alamat": "Jl. Indrakila No.17, Kebumen","kode": "3305023","prov": "Jawa Tengah","pic": "@ragilpambudi","ket": ""
       },
       {
-        "nama": "RS Islam Purwokerto","alamat": "Jl. Mashuri No.39","kode": "3302132","prov": "Jawat Tengah","pic": "@1"
+        "nama": "RS Islam Purwokerto","alamat": "Jl. Mashuri No.39","kode": "3302132","prov": "Jawat Tengah","pic": "@","ket": ""
       },
       {
-        "nama": "RS Mutiara Hati","alamat": "Jl. Raya Tambak Sari No.Km.36","kode": "3213044","prov": "Lampung","pic": "@1"
+        "nama": "RS Mutiara Hati","alamat": "Jl. Raya Tambak Sari No.Km.36","kode": "3213044","prov": "Lampung","pic": "@","ket": ""
       },
       {
-        "nama": "RS Pelita Insani","alamat": "Jl. Sekumpul, Martapura","kode": "6303027","prov": "Kalimantan Selatan","pic": "@1"
+        "nama": "RS Pelita Insani","alamat": "Jl. Sekumpul, Martapura","kode": "6303027","prov": "Kalimantan Selatan","pic": "@","ket": ""
       },
       {
-        "nama": "Klinik Azizah Metro","alamat": "Jl. Hanafiah No.64","kode": "0000000","prov": "Lampung","pic": "@1"
+        "nama": "Klinik Azizah Metro","alamat": "Jl. Hanafiah No.64","kode": "0000000","prov": "Lampung","pic": "@maztrie_rsazizahmetro","ket": ""
       },
       {
-        "nama": "RS Citra Husada","alamat": "Jl. Malijo No.RT.14, Pangkalan Bun","kode": "6201013","prov": "Kalimantan Tengah","pic": "@1"
+        "nama": "RS Citra Husada","alamat": "Jl. Malijo No.RT.14, Pangkalan Bun","kode": "6201013","prov": "Kalimantan Tengah",
+        "pic": "@","ket": ""
       },
       {
-        "nama": "RSUD Indramayu","alamat": "Jl. Murahnara No.7","kode": "3212016","prov": "Jawa Barat","pic": "@1"
+        "nama": "RSUD Indramayu","alamat": "Jl. Murahnara No.7","kode": "3212016","prov": "Jawa Barat","pic": "@nopidsugiana","ket": ""
       },
       {
-        "nama": "RS Permata Husada","alamat": "JL. Raya KM 4, Bantul","kode": "3402075","prov": "Yogyakarta","pic": "@1"
+        "nama": "RS Permata Husada","alamat": "JL. Raya KM 4, Bantul","kode": "3402075","prov": "Yogyakarta","pic": "@janawi99","ket": ""
       },
       {
-        "nama": "RS Arvita Bunda Maguwo","alamat": "Maguwo, Sleman","kode": "3404180","prov": "Yogyakarta","pic": "@1"
+        "nama": "RS Arvita Bunda Maguwo","alamat": "Maguwo, Sleman","kode": "3404180","prov": "Yogyakarta","pic": "@","ket": ""
       },
       {
-        "nama": "Klinik Utama An-Nissa","alamat": "Jl. Kaliurang Km. 13.5","kode": "0000000","prov": "Yogyakarta","pic": "@1"
+        "nama": "Klinik Utama An-Nissa","alamat": "Jl. Kaliurang Km. 13.5","kode": "0000000","prov": "Yogyakarta","pic": "@","ket": ""
       },
       {
-        "nama": "Klinik Panasea Medika","alamat": "Jl. A. Yani, Km. 2, Madiun","kode": "0000000","prov": "Jawa Timur","pic": "@1"
+        "nama": "Klinik Panasea Medika","alamat": "Jl. A. Yani, Km. 2, Madiun","kode": "0000000","prov": "Jawa Timur","pic": "@dr_saiful","ket": ""
       },
       {
-        "nama": "RS Muhammadiyah Kalitidu","alamat": "Jl. Raya Kalitidu-Cepu No. 266","kode": "3522060","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Muhammadiyah Kalitidu","alamat": "Jl. Raya Kalitidu-Cepu No. 266","kode": "3522060","prov": "Jawa Timur","pic": "@Priasetia_1","ket": ""
       },
       {
-        "nama": "Klinik ANS Kalitidu","alamat": "Jl. Raya Ngasem, Bojonegoro","kode": "0000000","prov": "Jawa Timur","pic": "@1"
+        "nama": "Klinik ANS Kalitidu","alamat": "Jl. Raya Ngasem, Bojonegoro","kode": "0000000","prov": "Jawa Timur","pic": "@Priasetia_1","ket": ""
       },
       {
-        "nama": "RSIA Permata Bunda ","alamat": "Sukaharja, Kab. Ketapang","kode": "7471103","prov": "Kalimantan Barat","pic": "@1"
+        "nama": "RSIA Permata Bunda ","alamat": "Sukaharja, Kab. Ketapang","kode": "7471103","prov": "Kalimantan Barat","pic": "@Ekatalita","ket": ""
       },
       {
-        "nama": "Rumah Sakit Balikpapan Baru","alamat": "Jl. Mohammad T. Haryono","kode": "6471077","prov": "Kalimantan Timur","pic": "@1"
+        "nama": "RS Balikpapan Baru","alamat": "Jl. Mohammad T. Haryono","kode": "6471077","prov": "Kalimantan Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Balikpapan","alamat": "Jl. Jenderal Sudirman No.14","kode": "6471073","prov": "Kalimantan Timur","pic": "@1"
+        "nama": "RS Bhayangkara Balikpapan","alamat": "Jl. Jenderal Sudirman No.14","kode": "6471073","prov": "Kalimantan Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Ibu Anak Asih Balikpapan","alamat": "Jl. Sepinggan Baru No.104","kode": "6471085","prov": "Kalimantan Timur","pic": "@1"
+        "nama": "RS Ibu Anak Asih Balikpapan","alamat": "Jl. Sepinggan Baru No.104","kode": "6471085","prov": "Kalimantan Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS TNI AU LANUD Balikpapan","alamat": "Jl. Marsma Iswahyudi RT. 41","kode": "6471078","prov": "Kalimantan Timur","pic": "@1"
+        "nama": "RS TNI AU LANUD Balikpapan","alamat": "Jl. Marsma Iswahyudi RT. 41","kode": "6471078","prov": "Kalimantan Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RSUD Pringsewu ","alamat": "Jl. Jend. Ahmad Yani","kode": "1803010","prov": "Lampung","pic": "@1"
+        "nama": "RSUD Pringsewu ","alamat": "Jl. Jend. Ahmad Yani","kode": "1803010","prov": "Lampung","pic": "@","ket": ""
       },
       {
-        "nama": "RSUD Sukadana","alamat": "Mataram Marga, Sukadana","kode": "1804011","prov": "Lampung","pic": "@1"
+        "nama": "RSUD Sukadana","alamat": "Mataram Marga, Sukadana","kode": "1804011","prov": "Lampung","pic": "@","ket": ""
       },
       {
-        "nama": "RS PKU Muhammadiyah Jatinom","alamat": "Jl. Raya Jatinom Km. 01, Klaten","kode": "3310418","prov": "Jawa Tengah","pic": "@1"
+        "nama": "RS PKU Muhammadiyah Jatinom","alamat": "Jl. Raya Jatinom Km. 01, Klaten","kode": "3310418","prov": "Jawa Tengah","pic": "@","ket": ""
       },
       {
-        "nama": "RS Islam Bontang","alamat": "Jl. Brigjen Katamso No.40","kode": "6474034","prov": "Kalimantan Timur","pic": "@1"
+        "nama": "RS Islam Bontang","alamat": "Jl. Brigjen Katamso No.40","kode": "6474034","prov": "Kalimantan Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Islam Namira","alamat": "Jl. KH Ahmad Dahlan No.17, Lombok","kode": "0000000","prov": "Nusa Tenggara Barat","pic": "@1"
+        "nama": "RS Islam Namira","alamat": "Jl. KH Ahmad Dahlan No.17, Lombok","kode": "0000000","prov": "Nusa Tenggara Barat","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Mataram","alamat": "Jl. Langko No.64","kode": "5271065","prov": "Nusa Tenggara Barat","pic": "@1"
+        "nama": "RS Bhayangkara Mataram","alamat": "Jl. Langko No.64","kode": "5271065","prov": "Nusa Tenggara Barat","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Medan","alamat": "Jl. K.H. Wahid Hasyim No.1","kode": "1275046","prov": "Sumatera Utara","pic": "@1"
+        "nama": "RS Bhayangkara Medan","alamat": "Jl. K.H. Wahid Hasyim No.1","kode": "1275046","prov": "Sumatera Utara","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Padang","alamat": "Jl. Jati No.1","kode": "1371123","prov": "Sumatera Barat","pic": "@1"
+        "nama": "RS Bhayangkara Padang","alamat": "Jl. Jati No.1","kode": "1371123","prov": "Sumatera Barat","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Jambi","alamat": "Jl. Raden Mattaher No.3","kode": "1571034","prov": "Jambi","pic": "@1"
+        "nama": "RS Bhayangkara Jambi","alamat": "Jl. Raden Mattaher No.3","kode": "1571034","prov": "Jambi","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Palembang","alamat": "Jl. Jend. Sudirman No.km 4","kode": "1671331","prov": "Sumatera Selatan","pic": "@1"
+        "nama": "RS Bhayangkara Palembang","alamat": "Jl. Jend. Sudirman No.km 4","kode": "1671331","prov": "Sumatera Selatan","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Sespimma POLRI","alamat": "Jl. Ciputat Raya No.40","kode": "3171785","prov": "DKI Jakarta","pic": "@1"
+        "nama": "RS Bhayangkara Sespimma POLRI","alamat": "Jl. Ciputat Raya No.40","kode": "3171785","prov": "DKI Jakarta","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Brimob","alamat": "Jl. Komjen.Pol.M.Jasin","kode": "3276039","prov": "Jawa Barat","pic": "@1"
+        "nama": "RS Bhayangkara Brimob","alamat": "Jl. Komjen.Pol.M.Jasin","kode": "3276039","prov": "Jawa Barat","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Tulungagung","alamat": "Jl. I Gusti Ngurah Rai No.29","kode": "3504068","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Bhayangkara Tulungagung","alamat": "Jl. I Gusti Ngurah Rai No.29","kode": "3504068","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Lumajang","alamat": "Jl. Kapten Kyai Ilyas No.7","kode": "3508054","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Bhayangkara Lumajang","alamat": "Jl. Kapten Kyai Ilyas No.7","kode": "3508054","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Bondowoso","alamat": "Jend. Pol. S. Judhodiharjo","kode": "3511012","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Bhayangkara Bondowoso","alamat": "Jend. Pol. S. Judhodiharjo","kode": "3511012","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Batu","alamat": "Ngaglik, Kec. Batu","kode": "3579003","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Bhayangkara Batu","alamat": "Ngaglik, Kec. Batu","kode": "3579003","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Palangkaraya","alamat": "Jl. Ahmad Yani No.22","kode": "6271025","prov": "Kalimantan Tengah","pic": "@1"
+        "nama": "RS Bhayangkara Palangkaraya","alamat": "Jl. Ahmad Yani No.22","kode": "6271025","prov": "Kalimantan Tengah","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Manado","alamat": "Jl. Samrat","kode": "7171061","prov": "Sumatera Utara","pic": "@1"
+        "nama": "RS Bhayangkara Manado","alamat": "Jl. Samrat","kode": "7171061","prov": "Sumatera Utara","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Makassar","alamat": "Jl. Andi Mappaodang No.63","kode": "7371041","prov": "Sulawesi Selatan","pic": "@1"
+        "nama": "RS Bhayangkara Makassar","alamat": "Jl. Andi Mappaodang No.63","kode": "7371041","prov": "Sulawesi Selatan","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Kendari","alamat": "Jl. Gunung Maluhu No. 7","kode": "7471070","prov": "Sulawesi Tenggara","pic": "@1"
+        "nama": "RS Bhayangkara Kendari","alamat": "Jl. Gunung Maluhu No. 7","kode": "7471070","prov": "Sulawesi Tenggara","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Ambon","alamat": "Jl. Sultan Hasanudin","kode": "8171121","prov": "Maluku","pic": "@1"
+        "nama": "RS Bhayangkara Ambon","alamat": "Jl. Sultan Hasanudin","kode": "8171121","prov": "Maluku","pic": "@","ket": ""
       },
       {
-        "nama": "RS Bhayangkara Pontianak","alamat": "Jl. K. S. Tubun No.14","kode": "6171067","prov": "Kalimantan Barat","pic": "@arinanda_wilman"
+        "nama": "RS Bhayangkara Pontianak","alamat": "Jl. K. S. Tubun No.14","kode": "6171067","prov": "Kalimantan Barat","pic": "@arinanda_wilman","ket": ""
       },
       {
-        "nama": "RS Prima Medika","alamat": "Jl. Ir. Soekarno Hatta No.27B, Tulungagung","kode": "3504081","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Prima Medika","alamat": "Jl. Ir. Soekarno Hatta No.27B, Tulungagung","kode": "3504081","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "Klinik Ngudi Waras","alamat": "Plosorejo, Kuto, Kerjo, Karanganyar","kode": "0000000","prov": "Jawa Tengah","pic": "@1"
+        "nama": "Klinik Ngudi Waras","alamat": "Plosorejo, Kuto, Kerjo, Karanganyar","kode": "0000000","prov": "Jawa Tengah","pic": "@","ket": ""
       },
       {
-        "nama": "RS UNS Surakarta","alamat": "Jl. A. Yani No.200","kode": "0000000","prov": "Jawa Tengah","pic": "@1"
+        "nama": "RS UNS Surakarta","alamat": "Jl. A. Yani No.200","kode": "0000000","prov": "Jawa Tengah","pic": "@","ket": ""
       },
       {
-        "nama": "RSUD Kab. Lombok Utara","alamat": "Jl. Tioq Tata, Tunaq","kode": "5208002","prov": "Nusa Tenggara Barat","pic": "@1"
+        "nama": "RSUD Kab. Lombok Utara","alamat": "Jl. Tioq Tata, Tunaq","kode": "5208002","prov": "Nusa Tenggara Barat","pic": "@","ket": ""
       },
       {
-        "nama": "RSI Kota Magelang","alamat": "JL. Jeruk, No. 4A","kode": "3371142","prov": "Jawa Tengah","pic": "@1"
+        "nama": "RSI Kota Magelang","alamat": "JL. Jeruk, No. 4A","kode": "3371142","prov": "Jawa Tengah","pic": "@","ket": ""
       },
       {
-        "nama": "RS Mutiara Bunda","alamat": "Jl. SA. Tirtayasa No.86, Cilegon","kode": "0000000","prov": "Banten","pic": "@1"
+        "nama": "RS Mutiara Bunda","alamat": "Jl. SA. Tirtayasa No.86, Cilegon","kode": "0000000","prov": "Banten","pic": "@","ket": ""
       },
       {
-        "nama": "Puskesmas Kerjo","alamat": "Jl. Kerjokra, Karanganyar","kode": "0000000","prov": "Jawa Tengah","pic": "@1"
+        "nama": "Puskesmas Kerjo","alamat": "Jl. Kerjokra, Karanganyar","kode": "0000000","prov": "Jawa Tengah","pic": "@","ket": ""
       },
       {
-        "nama": "Puskesmas Tunggakjati","alamat": "Jl. Raya Proklamasi, Karawang","kode": "0000000","prov": "Jawa Barat","pic": "@1"
+        "nama": "Puskesmas Tunggakjati","alamat": "Jl. Raya Proklamasi, Karawang","kode": "0000000","prov": "Jawa Barat","pic": "@","ket": ""
       },
       {
-        "nama": "RS Trisna Medika","alamat": "Jl. Pahlawan No.216, Tulungagung","kode": "3504078","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Trisna Medika","alamat": "Jl. Pahlawan No.216, Tulungagung","kode": "3504078","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Aura Syifa","alamat": "Jl. Joyoboyo No. 42, Kediri","kode": "3506062","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Aura Syifa","alamat": "Jl. Joyoboyo No. 42, Kediri","kode": "3506062","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Wilujeng","alamat": "Jl. Joyoboyo, Kediri","kode": "3506063","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Wilujeng","alamat": "Jl. Joyoboyo, Kediri","kode": "3506063","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RSUD Lumajang","alamat": "Jl. Jendral Ahmad Yani No.5","kode": "3508016","prov": "Jawa Timur","pic": "@1"
+        "nama": "RSUD Lumajang","alamat": "Jl. Jendral Ahmad Yani No.5","kode": "3508016","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RSUD Sumbawa","alamat": "Jl. Garuda No.5","kode": "5204013","prov": "Nusa Tenggara Barat","pic": "@1"
+        "nama": "RSUD Sumbawa","alamat": "Jl. Garuda No.5","kode": "5204013","prov": "Nusa Tenggara Barat","pic": "@","ket": ""
       },
       {
-        "nama": "RSUD Nganjuk","alamat": "Jl. Dr. Sutomo 62","kode": "3518011","prov": "Jawa Timur","pic": "@1"
+        "nama": "RSUD Nganjuk","alamat": "Jl. Dr. Sutomo 62","kode": "3518011","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Islam Aisyiyah","alamat": "Jl. Imam Bonjol No.20","kode": "3518046","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Islam Aisyiyah","alamat": "Jl. Imam Bonjol No.20","kode": "3518046","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RSIA Alf Subtin","alamat": "Jl. Anjuk Ladang, Nganjuk","kode": "0000000","prov": "Jawa Timur","pic": "@1"
+        "nama": "RSIA Alf Subtin","alamat": "Jl. Anjuk Ladang, Nganjuk","kode": "0000000","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS NU Jombang","alamat": "Jl. KH. Hasyim Asy'ari No.211","kode": "3517094","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS NU Jombang","alamat": "Jl. KH. Hasyim Asy'ari No.211","kode": "3517094","prov": "Jawa Timur","pic": "@","ket": ""
       },
       {
-        "nama": "RS Islam Madinah","alamat": "Raya Sukosari No.32, Malang","kode": "3507241","prov": "Jawa Timur","pic": "@1"
+        "nama": "RS Islam Madinah","alamat": "Raya Sukosari No.32, Malang","kode": "3507241","prov": "Jawa Timur","pic": "@","ket": ""
       },
     ];
     $('.display').DataTable({
@@ -364,7 +403,8 @@
         { "data": "kode" },
         { "data": "alamat" },
         { "data": "prov" },
-        { "data": "pic" }
+        { "data": "pic" },
+        { "data": "ket" }
       ]
     });
   });
